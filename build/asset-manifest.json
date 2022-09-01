@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.42dfc854.css",
+    "main.js": "/static/js/main.eb4febe0.js",
+    "static/media/team1.png": "/static/media/team1.7810bfdf12341c3768e7.png",
+    "static/media/sld1.png": "/static/media/sld1.56654765bbe306d30639.png",
+    "static/media/banner.png": "/static/media/banner.3c3925e29c0bf3a3e3da.png",
+    "static/media/match1.png": "/static/media/match1.5d99a54f1e57f541cbf9.png",
+    "static/media/promo.png": "/static/media/promo.01ef7aa21b9a0e87e35b.png",
+    "static/media/xoyTicketColorFont.png": "/static/media/xoyTicketColorFont.17d4ba95525c1d70da13.png",
+    "static/media/bsPlay.svg": "/static/media/bsPlay.33ea850e48f0b926a9bb299eab7abb44.svg",
+    "static/media/instagram.svg": "/static/media/instagram.a155f510843ffcc326ec258d9c6addae.svg",
+    "static/media/twitter.svg": "/static/media/twitter.17027249a74b007f8fcca5166347b134.svg",
+    "index.html": "/index.html",
+    "static/media/facebook.svg": "/static/media/facebook.c30c94fefd8c446fa83ce33f29f0c850.svg",
+    "static/media/xBrandsDesk.svg": "/static/media/xBrandsDesk.744a2682649d053458bca9135db30ea2.svg",
+    "static/media/close.svg": "/static/media/close.849205dfd924041fd63310b701111834.svg",
+    "static/media/xBrands.svg": "/static/media/xBrands.98c8f794afc11724be347443976aa61c.svg",
+    "static/media/xFooterMobile.svg": "/static/media/xFooterMobile.a58fc551f6364d69800e4d35ed2ef2e9.svg",
+    "static/media/search.svg": "/static/media/search.ca641223b07b7c078a7f3277437cb9a7.svg",
+    "main.42dfc854.css.map": "/static/css/main.42dfc854.css.map",
+    "main.eb4febe0.js.map": "/static/js/main.eb4febe0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42dfc854.css",
+    "static/js/main.eb4febe0.js"
+  ]
+}
