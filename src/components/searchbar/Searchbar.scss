@@ -1,0 +1,40 @@
+.searchbarContainer {
+    display: flex;
+    padding: 2rem;
+
+    &.background {
+        background-color: #ab0033;
+
+        .searchbar {
+            background-color: #ae0c3d;
+        }
+    }
+    .searchbar {
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+        border: 1px solid white;
+        border-radius: 5rem;
+        width: 100%;
+
+        &__input {
+            background-color: transparent;
+            width: 100%;
+            border: none;
+            outline: none;
+            width: 100%;
+            color: white;
+            margin: 0%;
+            padding: 0%;
+            font-size: 1.5rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            &::placeholder {
+                color: white;
+            }
+        }
+        &__icon {
+            width: 2rem;
+        }
+    }
+}

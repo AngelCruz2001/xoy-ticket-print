@@ -1,0 +1,93 @@
+@use "../../styles/abstracts/mixins";
+@use "../../styles/colors";
+
+.tickets {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    gap: 3rem;
+}
+
+.itemTicket {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+.infoContainer {
+    width: 70%;
+    text-align: center;
+}
+.infoTitle {
+    p {
+        font-size: calc(1rem + 2vw);
+        font-weight: 600;
+    }
+}
+
+.itemDate {
+    p {
+        color: colors.$secondary;
+        font-weight: 500;
+    }
+}
+
+.seats {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    gap: 3rem;
+}
+.seatContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border: 10px solid colors.$secondary;
+    padding: 3rem;
+}
+
+.location {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        p {
+            text-align: center;
+            width: 100%;
+            
+            &.titleSeat {
+                border: 1px solid colors.$secondary;
+                font-size: calc(1rem + 2vw);
+            }
+            &.text {
+                font-size: calc(1rem + 1.5vw);
+            }
+        }
+    }
+}

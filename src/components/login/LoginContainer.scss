@@ -1,0 +1,145 @@
+@use "../../styles/abstracts/mixins";
+.loginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #023895;
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        margin: 6rem;
+        margin-top: 2.5rem;
+        padding: 1rem;
+        background-color: #fff;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+        @include mixins.respond(from-tab-land) {
+            width: 60%;
+            margin-top: 0;
+            padding: 0rem;
+            flex-direction: row;
+        }
+
+        &__leftside {
+            padding: 1.5rem;
+            @include mixins.respond(from-tab-land) {
+                width: 80%;
+                padding: 5rem;
+            }
+
+            &__logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1rem;
+                border: none;
+                img {
+                    width: 15rem;
+                   
+                }
+                @include mixins.respond(from-tab-land) {
+                    display: none;
+                }
+            }
+
+            &__title {
+                text-align: center;
+                @include mixins.respond(from-tab-land) {
+                    text-align: left;
+                    font-size: 3rem;
+                }
+                margin-bottom: 1.5rem;
+                font-size: 2.5rem;
+                font-weight: bold;
+                font-family: "Outfit";
+            }
+
+            &__register {
+                margin-top: 3rem;
+                font-size: 1.5rem;
+                font-weight: bold;
+                font-family: "Outfit";
+                color: #023895;
+                text-decoration: none;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &__subtitle {
+                font-size: 1.5rem;
+                max-width: 30rem;
+                font-family: "Outfit";
+                margin-bottom: 4rem;
+                font-weight: 400;
+
+                text-align: center;
+                @include mixins.respond(from-tab-land) {
+                    font-size: 1.5rem;
+                    text-align: left;
+                    max-width: 24rem;
+                }
+            }
+
+            .field {
+                position: relative;
+                border-radius: 1rem;
+                border: 1px solid #ccc;
+                padding: 1.5rem;
+                width: 100%;
+                margin-bottom: 2.5rem;
+                &:first-of-type {
+                    margin-bottom: 3rem;
+                }
+                .input {
+                    width: 100%;
+                    font-size: 1.5rem;
+                    font-family: "Outfit";
+                }
+                .error {
+                    color: #ff0000;
+                    font-size: 1.5rem;
+                    margin-left: 1rem;
+                    font-family: "Outfit";
+                    position: absolute;
+                    bottom: -2.3rem;
+                    left: 0;
+                }
+            }
+
+            &__button {
+                margin-top: 2rem;
+                width: 100%;
+                padding: 1.5rem;
+                font-size: 2rem;
+                font-family: "Outfit";
+                color: white;
+                background-color: #287cfa;
+                border-radius: 0.5rem;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: #023895;
+                }
+            }
+        }
+        &__rightside {
+            display: none;
+
+            @include mixins.respond(from-tab-land) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                padding: 1.5rem;
+                background: rgb(255, 0, 183);
+                background: linear-gradient(90deg, rgba(255, 0, 183, 1) 0%, rgba(255, 109, 0, 1) 100%);
+                width: 50%;
+                // height: 50rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@use "../../styles/abstracts/mixins";
+
+.hero {
+    height: 30rem;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.buttonHero {
+    @include mixins.button(medium, true);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+}

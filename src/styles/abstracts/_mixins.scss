@@ -1,0 +1,158 @@
+@use "../colors" as *;
+@use "./variables" as *;
+@use "../animations" as *;
+@use "../fonts" as *;
+
+@mixin transition {
+    transition: $transition;
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==phone {
+        @media (max-width: 37.5em) {
+            @content;
+        } // 600px
+    }
+
+    @if $breakpoint==tab-port {
+        @media (max-width: 56.25em) {
+            @content;
+        } // 900px
+    }
+
+    @if $breakpoint==from-tab-land {
+        @media (min-width: 56.25em) {
+            @content;
+        } // 900px
+    }
+
+    @if $breakpoint==tab-land {
+        @media (max-width: 75em) {
+            @content;
+        } //1200px
+    }
+
+    @if $breakpoint==big-desk {
+        @media (min-width: 112.5em) {
+            @content;
+        } //1800px
+    }
+}
+
+@mixin scrollBar($width) {
+    &::-webkit-scrollbar {
+        width: $width;
+
+        @include respond(tab-land) {
+            display: none;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary;
+
+        &:hover {
+            background-color: $primary-dark;
+        }
+    }
+}
+
+@mixin boxShadow {
+    box-shadow: 0 5px 1rem 0rem rgba($secondary, 0.3);
+}
+
+@mixin button($size, $filled) {
+    border-radius: 0.8rem;
+    font-family: "Outfit", sans-serif;
+    color: $color-white;
+    padding: 0 4rem;
+    background-color: $primary;
+    transition: all 0.2s ease-in-out;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.15));
+
+    &:hover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @if $size==medium {
+        height: 4rem;
+        font-size: $medium-font-size;
+    }
+
+    @if $size==large {
+        height: 5rem;
+        font-size: $large-font-size;
+    }
+
+    @if $filled==false {
+        background-color: transparent;
+        border: 1px solid $primary;
+        color: $primary;
+
+        &:hover {
+            background-color: $primary;
+            color: $color-white;
+        }
+    }
+}
+
+@mixin card {
+    background-color: $color-white;
+    border-radius: $box-border-radius;
+    @include boxShadow;
+    padding: 4rem;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    margin: 6rem auto;
+
+    & .titleCard {
+        font-family: "Outfit";
+    }
+}
+
+@mixin largeButton {
+    @include button;
+    width: 100%;
+}
+
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin text($size, $color) {
+    font-family: "Outfit", sans-serif;
+    color: $color;
+
+    @if $size==small {
+        font-size: $small-font-size;
+    }
+
+    @if $size==medium {
+        font-size: $medium-font-size;
+    }
+
+    @if $size==large {
+        font-size: $large-font-size;
+    }
+}
+
+@mixin iconTitle {
+    width: calc(2rem + 2.5vw);
+    margin-right: 3rem;
+}
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

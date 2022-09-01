@@ -1,0 +1,15 @@
+@use "../../styles/abstracts/mixins";
+@use "../../styles/colors";
+.title {
+    display: flex;
+    align-items: center;
+    margin-left: calc(1rem + 4vw);
+    margin-bottom: 3rem;
+    img {
+        @include mixins.iconTitle;
+    }
+    h3 {
+        font-family: "Outfit", sans-serif;
+        font-size: calc(1rem + 3vw);
+    }
+}

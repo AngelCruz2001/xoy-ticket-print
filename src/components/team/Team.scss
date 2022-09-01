@@ -1,0 +1,40 @@
+@use "../../styles/colors";
+.teamList {
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow-y: scroll;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+
+    .itemTeam {
+        width: 50rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        .imgContainer {
+            margin-bottom: 2rem;
+
+            width: 30rem;
+            height: 40rem;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        p {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: colors.$secondary;
+            margin: 0;
+            padding: 0;
+
+            span {
+                font-size: 3rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,174 @@
+@use "../../styles/colors";
+@use "../../styles/abstracts/mixins";
+
+.footer {
+    background-color: colors.$secondary;
+    padding: 5rem 10%;
+    position: relative;
+  
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    @include mixins.respond(from-tab-land) {
+        display: flex;
+        flex-direction: row;
+        gap: 15rem;
+    }
+
+    .rightside {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgContainer {
+        width: 14rem;
+        margin-bottom: 2rem;
+        @include mixins.respond(from-tab-land) {
+            width: 14rem;
+            margin-bottom: 4rem;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .info {
+        font-family: "Outfit", sans-serif;
+        color: colors.$color-white;
+        margin-bottom: 5rem;
+
+        @include mixins.respond(from-tab-land) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            color: colors.$primary;
+            font-size: calc(1rem + 6vw);
+            margin-bottom: 0.3rem;
+
+            @include mixins.respond(from-tab-land) {
+                color: #ff00b7;
+                font-size: 4rem;
+            }
+        }
+
+        p {
+            font-size: calc(1rem + 2vw);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            @include mixins.respond(from-tab-land) {
+                width: 20rem;
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+        }
+        span {
+            font-size: calc(1rem + 4vw);
+            font-weight: 700;
+
+            @include mixins.respond(from-tab-land) {
+                
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .links {
+        @include mixins.respond(from-tab-land) {
+            order: 2;
+        }
+        font-size: calc(1rem + 3vw);
+        margin-bottom: 15rem;
+        h3 {
+            color: colors.$color-white;
+            font-size: 2.1rem;
+            margin-bottom: 1.5rem;
+            text-decoration: underline;
+        }
+    }
+
+    .social {
+        @include mixins.respond(from-tab-land) {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        margin-bottom: 50rem;
+        p {
+
+            @include mixins.respond(from-tab-land) {
+                font-size:2rem;
+            }
+            font-size: calc(1rem + 2vw);
+            color: colors.$color-white;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .social__icons {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            @include mixins.respond(from-tab-land) {
+                width: 100%;
+            }
+            margin-bottom: 2rem;
+
+            img {
+                @include mixins.respond(from-tab-land) {
+                
+                width: 5rem;
+                height: 5rem;
+                }
+                width: 6rem;
+                height: 6rem;
+                object-fit: cover;
+            }
+        }
+    }
+    .copyright {
+        position: absolute;
+        height: 50rem;
+        width: 75%;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(90deg, #ff00b7 10.83%, #ff6d00 82.86%);
+        -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        clip-path: polygon(100% 0, 0 100%, 100% 100%);
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 2rem;
+
+        p {
+            font-size: calc(0.5rem + 3vw);
+            color: colors.$color-white;
+            text-align: right;
+        }
+
+        @include mixins.respond(from-tab-land) {
+            height: 65rem;
+            width: 25%;
+            p {
+                font-size: calc(0.5rem + 1vw);
+            }
+        }
+    }
+
+    .copyrightText {
+    }
+
+    .xFooter {
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        
+
+        @include mixins.respond(from-tab-land) {
+           right: 10rem;
+           height: 100%;
+    }
+}
+}

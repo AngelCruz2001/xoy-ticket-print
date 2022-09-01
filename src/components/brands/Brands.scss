@@ -1,0 +1,53 @@
+@use "../../styles/abstracts/mixins";
+.brandsContainer {
+    background-color: #287cfa;
+    min-height: 30rem;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    padding: 20% 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    position: relative;
+    overflow: hidden;
+    @include mixins.respond(from-tab-land) {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        padding: 3rem 5rem;
+    }
+
+    &__brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mixins.respond(from-tab-land) {
+            
+        
+        }
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .x {
+        position: absolute;
+        left: 0;
+        @include mixins.respond(from-tab-land) {
+            height: 65rem;
+            right: -12rem;
+            left: initial;
+            top: -35rem;
+        }
+    }
+
+
+    .x2 {
+        @include mixins.respond(from-tab-land) {
+            position: absolute;
+            height: 50rem;
+            left: -5rem;
+            top: -25rem;
+        }
+    }
+}
